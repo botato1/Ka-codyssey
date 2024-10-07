@@ -3,12 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-void clearScreen() {
+void clearScreen() 
+{
     // 화면 지우기 (Windows의 경우 CLS 명령어 사용)
     system("cls || clear");
 }
 
-void getInput(char* name, char* date) {
+void getInput(char* name, char* date) 
+{
     printf("[현재 날짜를 \"yyyy-mm-dd\" 형식으로 입력하세요]: ");
     scanf("%10s", date);  // 최대 10자리 입력
     printf("[당신의 이름을 입력하세요]: ");
@@ -27,7 +29,8 @@ void displaySplashScreen(const char* name, const char* date) {
     printf("================================================================================\n");
 }
 
-void printTriangles() {
+void printTriangles() 
+{
     int i, j;
     int height = 3;  // 삼각형 높이
 
@@ -45,22 +48,23 @@ void printTriangles() {
     }
 }
 
-int main() {
+int main() 
+{
     char name[50], date[11];
 
-    // 입력 받기
+  
     getInput(name, date);
 
-    // 3초 대기 (간단한 대기 시뮬레이션)
-    for (volatile long i = 0; i < 300000000; i++);  // 약간의 시간 지연을 위한 루프
+    // 3초 대기
+    for (volatile long i = 0; i < 300000000; i++);  
 
-    // 화면 지우기
+   
     clearScreen();
 
-    // 스플래시 화면 출력
+   
     displaySplashScreen(name, date);
 
-    // 삼각형 출력
+    
     printTriangles();
 
     return 0;
