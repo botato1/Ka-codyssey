@@ -5,17 +5,16 @@
 
 void clearScreen() 
 {
-    // 화면 지우기 (Windows의 경우 CLS 명령어 사용)
+    // 화면 지우기 
     system("cls || clear");
 }
 
 void getInput(char* name, char* date) 
 {
     printf("[현재 날짜를 \"yyyy-mm-dd\" 형식으로 입력하세요]: ");
-    scanf("%10s", date);  // 최대 10자리 입력
+    scanf("%10s", date);  
     printf("[당신의 이름을 입력하세요]: ");
-    scanf("%49s", name);  // 최대 49자리 입력
-    printf("**입력이 정상적으로 처리되었습니다.**\n");
+    scanf("%49s", name);  // 최대 49자리 입력으로 처리되었습니다.**\n");
 }
 
 void displaySplashScreen(const char* name, const char* date) {
@@ -35,13 +34,16 @@ void printTriangles()
     int height = 3;  // 삼각형 높이
 
     // 왼쪽 정직삼각형 출력
-    for (i = 0; i < height; i++) {
-        for (j = 0; j <= i; j++) {
+    for (i = 0; i < height; i++) 
+    {
+        for (j = 0; j <= i; j++) 
+        {
             printf("*");  // 정직삼각형 왼쪽
         }
         printf("      ");  // 가운데 공백
         // 오른쪽 역직삼각형 출력
-        for (j = height - 1; j > i; j--) {
+        for (j = height - 1; j > i; j--) 
+        {
             printf("*");  // 역직삼각형 오른쪽
         }
         printf("\n");
